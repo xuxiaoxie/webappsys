@@ -19,9 +19,15 @@ public class Account implements Serializable {
 
 	@Id(auto=true)
 	private Long id=1L;
+	
+	@Column("user_id")
+	private String userId;
 
-	@Column("name")
-	private String name;
+	@Column("wechat_no")
+	private String wechatNo;
+	
+	@Column("public_name")
+	private String publicName;
 	
 	@Column("password")
 	private String password;
@@ -40,6 +46,33 @@ public class Account implements Serializable {
 	
 	@Column("token")
 	private String token;
+	
+	@Column("account_type")
+	private String accountType;
+	
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+
+	public String getPublicName() {
+		return publicName;
+	}
+
+	public void setPublicName(String publicName) {
+		this.publicName = publicName;
+	}
 
 	public Long getId() {
 		return id;
@@ -49,12 +82,12 @@ public class Account implements Serializable {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getWechatNo() {
+		return wechatNo;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setWechatNo(String wechatNo) {
+		this.wechatNo = wechatNo;
 	}
 
 	public String getPassword() {

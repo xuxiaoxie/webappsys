@@ -6,6 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 	<head>
+        <script src="${ctx}/js/plugins/jquery/jquery-1.7.2.min.js"></script>
         <sitemesh:head />
 	</head>
 <body>
@@ -82,7 +83,6 @@
 		</div>
 		
 	<!-- JS -->
-		<script src="${ctx}/js/plugins/jquery/jquery-1.7.2.min.js"></script>
 		<script src="${ctx}/js/plugins/bootstrap-2.2.1/js/bootstrap.min.js"></script>
 
 		<script src="${ctx}/js/plugins/bootstrap-2.2.1/js/excanvas.min.js"></script>
