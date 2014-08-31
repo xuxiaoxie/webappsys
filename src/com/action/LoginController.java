@@ -37,4 +37,13 @@ public class LoginController extends BaseController {
 		
 		return "home";
 	}
+	/**
+	 * 修改密码
+	 * @return
+	 */
+	@RequestMapping("/changePW.html")
+	public String changePW(){
+		
+		return "changePW";
+	}
 }

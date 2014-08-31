@@ -28,7 +28,7 @@
                	 <b class="caret"></b>
                 </a>
                     <ul class="dropdown-menu">
-                        <li><a class="sAdd" title="" href="change-pwd.html">修改密码</a></li>
+                        <li><a class="sAdd" title="" href="${ctx}/changePW.html">修改密码</a></li>
                     </ul>
                 </li>
                 <li class="btn btn-inverse"><a title="" href="javascript:void(0);"><i class="icon icon-cog"></i> 
