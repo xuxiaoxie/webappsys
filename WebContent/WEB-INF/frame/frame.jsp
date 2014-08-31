@@ -35,7 +35,7 @@
                 <li class="btn btn-inverse"><a title="" href="javascript:void(0);"><i class="icon icon-cog"></i> 
                 <span class="text">设置</span></a></li>
                 <li class="btn btn-inverse">
-                	<a title="" href="${ctx}/">
+                	<a title="" href="${ctx}/logout.html">
                 	<i class="icon icon-share-alt"></i>
                 	 <span class="text">退出</span></a>
                  </li>

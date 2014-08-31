@@ -9,7 +9,7 @@ import org.nutz.dao.entity.annotation.Table;
 /**
  * 会员对象实体类
  * 
- * @author 刘立立
+ * @author XuzhiJian
  * 
  */
 @Table("account")

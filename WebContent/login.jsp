@@ -40,13 +40,13 @@
         
         <div id="loginbox">  
                   
-            <form id="loginform" class="form-vertical" action="javascript:void(0)" />
+            <form id="loginform" class="form-vertical" action="${ctx}/login.html" />
 				<h3>欢迎您登录系统</h3>
                 
                 <div class="control-group">
                     <div class="controls">
                         <div class="input-prepend">
-                            <span class="add-on"><i class="icon-user"></i></span><input type="text" placeholder="用户名" />
+                            <span class="add-on"><i class="icon-user"></i></span><input type="text" name="userName" value="admin" placeholder="用户名" />
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 <div class="control-group">
                     <div class="controls">
                         <div class="input-prepend">
-                            <span class="add-on"><i class="icon-lock"></i></span><input type="password" placeholder="密码" />
+                            <span class="add-on"><i class="icon-lock"></i></span><input type="password" name="password" value="admin" placeholder="密码" />
                         </div>
                     </div>
                 </div>
