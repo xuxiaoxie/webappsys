@@ -7,6 +7,12 @@
 		<pattern>/login.jsp</pattern>
 	</excludes>
 	
+	<decorator name="userFrame" page="userFrame.jsp">
+		<pattern>/home.html</pattern>
+		<pattern>/changePW.html</pattern>
+		<pattern>/users/*</pattern>
+	</decorator>
+	
 	<decorator name="frame" page="frame.jsp">
 		<pattern>/*</pattern>
 	</decorator>

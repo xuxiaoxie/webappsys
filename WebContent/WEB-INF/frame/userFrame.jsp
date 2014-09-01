@@ -51,7 +51,7 @@
 				<li class="submenu">
 					<a href="javascript:void(0);"><i class="icon icon-envelope"></i> <span>我的公众号</span> </a>
 					<ul>
-						<li><a href="${ctx}/wechat/addWechat.html">添加公众号</a></li>
+						<li><a href="${ctx}/users/addWechat.html">添加公众号</a></li>
 					</ul>
 				</li>
 				

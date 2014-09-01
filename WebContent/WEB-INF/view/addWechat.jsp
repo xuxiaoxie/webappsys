@@ -50,37 +50,38 @@
 								<div class="widget-content nopadding">
 								    <!-- 这里需要自己定义名称 -->
 									<form class="form-horizontal" method="post" action="#" name="password_validate" id="password_validate" novalidate="novalidate" />
+									<input type="hidden" name="id" value="${account.id}">
 										<div class="control-group">
 										<label class="control-label">公众号名称<span style="color:red;">*</span></label>
 										<div class="controls">
-											<input type="text" name="publicName" placeholder="必须填写..." />
+											<input type="text" name="publicName" placeholder="必须填写..."  value="${account.publicName}"/>
 										</div>
 									</div>
 									<div class="control-group">
 										<label class="control-label">公众号原始id<span style="color:red;">*</span></label>
 										<div class="controls">
-											<input type="text" name="originalId" placeholder="必须填写..." />
+											<input type="text" name="originalId" placeholder="必须填写..." value="${account.originalId}"/>
 											<span class="help-block">微信后台公众号设置中查询，如 gh_87878792a3</span>
 										</div>
 									</div>
 									<div class="control-group">
 										<label class="control-label">微信号<span style="color:red;">*</span></label>
 										<div class="controls">
-											<input type="text"  name="wechatNo" placeholder="必须填写..." />
+											<input type="text"  name="wechatNo" placeholder="必须填写..." value="${account.wechatNo}"/>
 											<span class="help-block">微信后台公众号设置中查询，如 wandaguangchang</span>
 										</div>
 									</div>
 									<div class="control-group">
 										<label class="control-label">AppID</label>
 										<div class="controls">
-											<input type="text" name="appId" placeholder="选择填写..." />
+											<input type="text" name="appId" placeholder="选择填写..." value="${account.appId }"/>
 											<span class="help-block">用于自定义微信菜单</span>
 										</div>
 									</div>
 									<div class="control-group">
 										<label class="control-label">AppSecret</label>
 										<div class="controls">
-											<input type="text" name="appSecret" placeholder="选择填写..." />
+											<input type="text" name="appSecret" placeholder="选择填写..."  value="${account.appSecret }"/>
 											<span class="help-block">用于自定义微信菜单</span>
 										</div>
 									</div>
@@ -106,7 +107,7 @@
 	<script type="text/javascript">
 	$(function(){
 		$("#addWechat").click(function(){
-			$.post("addWechat.html",
+			$.post("saveWechat.html",
 					$("form").serialize(),
 					function(data){
 					if(data==1){

@@ -85,21 +85,15 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td><a href="wechart-index.html">留夫鸭</a></td>
-											<td>创建时间:2014-08-20<br/>到期时间2015-08-20</td>
+									<c:forEach items="${list}" var="account">
+									    <tr>
+											<td><a href="wechart-index.html">${account.publicName}</a></td>
+											<td>创建时间:${account.createDate}<br/>到期时间${account.expireDate}</td>
 											<td>图文:200/200000</td>
 											<td>总请求数:230<br/>本月请求数:200000</td>
-											<td>编辑  删除 功能管理</td>
+											<td><a href="${ctx}/users/editWechat.html?id=${account.id}">编辑</a>  删除 功能管理</td>
 										</tr>
-										<tr>
-											<td><a href="wechart-index.html">留夫鸭</a></td>
-											<td>创建时间:2014-08-20<br/>到期时间2015-08-20</td>
-											<td>图文:200/200000</td>
-											<td>总请求数:230<br/>本月请求数:200000</td>
-											<td>编辑  删除 功能管理</td>
-										</tr>
-										
+									</c:forEach>
 									</tbody>
 								</table>							
 							</div>

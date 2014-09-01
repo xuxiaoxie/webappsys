@@ -1,6 +1,7 @@
 package com.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import org.nutz.dao.entity.annotation.Column;
 import org.nutz.dao.entity.annotation.Id;
@@ -21,7 +22,7 @@ public class Account implements Serializable {
 	private Long id=1L;
 	
 	@Column("user_id")
-	private String userId;
+	private Long userId;
 
 	@Column("wechat_no")
 	private String wechatNo;
@@ -33,7 +34,7 @@ public class Account implements Serializable {
 	private String password;
 	
 	@Column("original_Id")
-	private Long originalId;
+	private String originalId;
 	
 	@Column("appId")
 	private String appId;
@@ -50,11 +51,34 @@ public class Account implements Serializable {
 	@Column("account_type")
 	private String accountType;
 	
-	public String getUserId() {
+	@Column("create_date")
+	private Date createDate;
+	
+	@Column("expire_date")
+	private Date expireDate;
+	
+	
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public Date getExpireDate() {
+		return expireDate;
+	}
+
+	public void setExpireDate(Date expireDate) {
+		this.expireDate = expireDate;
+	}
+
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
@@ -98,11 +122,11 @@ public class Account implements Serializable {
 		this.password = password;
 	}
 
-	public Long getOriginalId() {
+	public String getOriginalId() {
 		return originalId;
 	}
 
-	public void setOriginalId(Long originalId) {
+	public void setOriginalId(String originalId) {
 		this.originalId = originalId;
 	}
 

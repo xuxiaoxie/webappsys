@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.entity.Account;
 import com.entity.Users;
 
 @Controller
@@ -31,7 +32,7 @@ public class LoginController extends BaseController {
 				.and("pass_word","=",users.getPassword());
 		List<Users> list= dao.query(Users.class, condition);
 	    if(list.size()==1){
-	    	request.getSession().setAttribute("LoginUser", list.get(0));
+	    	request.getSession().setAttribute("loginUser", list.get(0));
 	    	return "redirect:/home.html";
 	    }else{
 	    	return "redirect:/";
@@ -54,8 +55,11 @@ public class LoginController extends BaseController {
       * @return
       */
 	@RequestMapping("/home.html")
-	public String home(){
-
+	public String home(HttpServletRequest request){
+        Users loginUser=(Users) request.getSession().getAttribute("loginUser");
+        Cnd cnd=Cnd.where("user_id", "=", loginUser.getId());
+        List<Account> list=dao.query(Account.class, cnd);
+		request.setAttribute("list", list);
 		return "home";
 	}
 	
