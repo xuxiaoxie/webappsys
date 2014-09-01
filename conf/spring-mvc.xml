@@ -34,13 +34,10 @@
 	<bean id="dao" class="org.nutz.dao.impl.NutDao">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
-	<!-- 将无法mapping到Controller的path交给default servlet handler处理 -->
-	<mvc:default-servlet-handler />
 
-	<mvc:interceptors>
-		<bean class="com.interceptor.LoginAnnotationInterceptor"></bean>
-	</mvc:interceptors>
+<!-- 	<mvc:interceptors> -->
+<!-- 		<bean class="com.interceptor.LoginAnnotationInterceptor"></bean> -->
+<!-- 	</mvc:interceptors> -->
 	
 
 	<!-- 定义JSP文件的位置 -->

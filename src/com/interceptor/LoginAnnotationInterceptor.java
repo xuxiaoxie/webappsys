@@ -21,14 +21,14 @@ public class LoginAnnotationInterceptor extends HandlerInterceptorAdapter {
 				&& !"".equals(request.getQueryString())) {
 			requestURL = requestURL + "?" + request.getQueryString();
 		}
-		if(requestURL.startsWith("/login.html")){
+		if(requestURL.startsWith("/login.html")||requestURL.startsWith("/login.jsp")){
 			return true;
 		}else{
 			HttpSession session = request.getSession();
 			Users loginUser = (Users) session.getAttribute("loginUser");
 			// 取得session中的用户信息, 以便判断是否登录了系统
 			if (null == loginUser) {
-				response.sendRedirect(ctx + "/index.jsp");
+				response.sendRedirect(ctx + "/login.jsp");
 				return false;
 			}
 		}
