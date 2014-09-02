@@ -12,9 +12,6 @@ import java.util.Arrays;
  */
 public class SignUtil {
 	
-	// 与开发模式接口配置信息中的Token保持一致
-	private static String token = "weixinCourse";
-
 	/**
 	 * 校验签名
 	 * 
@@ -23,7 +20,7 @@ public class SignUtil {
 	 * @param nonce 随机数
 	 * @return
 	 */
-	public static boolean checkSignature(String signature, String timestamp, String nonce) {
+	public static boolean checkSignature(String signature, String timestamp, String nonce,String token) {
 		// 对token、timestamp和nonce按字典排序
 		String[] paramArr = new String[] { token, timestamp, nonce };
 		Arrays.sort(paramArr);
