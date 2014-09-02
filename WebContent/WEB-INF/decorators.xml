@@ -13,7 +13,7 @@
 		<pattern>/users/*</pattern>
 	</decorator>
 	
-	<decorator name="frame" page="frame.jsp">
+	<decorator name="wechatFrame" page="wechatFrame.jsp">
 		<pattern>/*</pattern>
 	</decorator>
 	

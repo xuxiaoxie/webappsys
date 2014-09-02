@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -87,11 +88,14 @@
 									<tbody>
 									<c:forEach items="${list}" var="account">
 									    <tr>
-											<td><a href="wechart-index.html">${account.publicName}</a></td>
-											<td>创建时间:${account.createDate}<br/>到期时间${account.expireDate}</td>
+											<td><a href="${ctx}/${account.wechatNo}/index.html">${account.publicName}</a></td>
+											<td>创建时间:<fmt:formatDate value="${account.createDate}" type="date" dateStyle="default" /><br/>
+											到期时间:<fmt:formatDate value="${account.expireDate}" type="date" dateStyle="default" /></td>
 											<td>图文:200/200000</td>
 											<td>总请求数:230<br/>本月请求数:200000</td>
-											<td><a href="${ctx}/users/editWechat.html?id=${account.id}">编辑</a>  删除 功能管理</td>
+											<td><a href="${ctx}/users/editWechat.html?id=${account.id}">编辑</a>
+											    <a href="###">删除</a>
+											    <a href="###">功能管理</a>  </td>
 										</tr>
 									</c:forEach>
 									</tbody>
