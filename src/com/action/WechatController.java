@@ -18,9 +18,15 @@ public class WechatController extends BaseController {
 	public String preAddWechat(@PathVariable String wechatNo,
 			HttpServletRequest request) {
 		
-		
-		
 		request.setAttribute("wechatNo",wechatNo);
 		return "wechat/index";
+	}
+	
+	@RequestMapping("/{wechatNo}/api.html")
+	public String api(@PathVariable String wechatNo,
+			HttpServletRequest request) {
+		
+		request.setAttribute("wechatNo",wechatNo);
+		return "wechat/api";
 	}
 }

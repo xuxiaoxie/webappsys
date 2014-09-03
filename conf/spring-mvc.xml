@@ -21,13 +21,20 @@
 	<!-- 将无法mapping到Controller的path交给default servlet handler处理 -->
 	<mvc:default-servlet-handler />
 
-	<!-- the DataSource -->
+<!-- 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" -->
+<!-- 		destroy-method="close"> -->
+<!-- 		<property name="driverClassName" value="com.mysql.jdbc.Driver" /> -->
+<!-- 		<property name="url" value="jdbc:mysql://localhost:3306/weixin?useUnicode=true&amp;characterEncoding=utf8" /> -->
+<!-- 		<property name="username" value="root" /> -->
+<!-- 		<property name="password" value="" /> -->
+<!-- 	</bean> -->
+	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/weixin?useUnicode=true&amp;characterEncoding=utf8" />
+		<property name="url" value="jdbc:mysql://114.215.184.22:3306/weixin?useUnicode=true&amp;characterEncoding=utf8" />
 		<property name="username" value="root" />
-		<property name="password" value="" />
+		<property name="password" value="root" />
 	</bean>
 	
 	<!-- Nutz DAO -->
@@ -35,9 +42,9 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<mvc:interceptors>
-		<bean class="com.interceptor.LoginAnnotationInterceptor"></bean>
-	</mvc:interceptors>
+<!-- 	<mvc:interceptors> -->
+<!-- 		<bean class="com.interceptor.LoginAnnotationInterceptor"></bean> -->
+<!-- 	</mvc:interceptors> -->
 	
 
 	<!-- 定义JSP文件的位置 -->

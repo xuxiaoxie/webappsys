@@ -93,9 +93,12 @@
 											到期时间:<fmt:formatDate value="${account.expireDate}" type="date" dateStyle="default" /></td>
 											<td>图文:200/200000</td>
 											<td>总请求数:230<br/>本月请求数:200000</td>
-											<td><a href="${ctx}/users/editWechat.html?id=${account.id}">编辑</a>
+											<td>
+											    <a href="${ctx}/users/editWechat.html?id=${account.id}">编辑</a>
 											    <a href="###">删除</a>
-											    <a href="###">功能管理</a>  </td>
+											    <a href="###">功能管理</a> 
+											    <a href="${ctx}/${account.wechatNo}/api.html">API接口</a>   
+											 </td>
 										</tr>
 									</c:forEach>
 									</tbody>
